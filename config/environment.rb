@@ -50,6 +50,9 @@ Rails::Initializer.run do |config|
   # It will automatically turn deliveries on
   config.action_mailer.perform_deliveries = false
 
+  config.action_controller.session = { :key => "_myapp_session", :secret => "brkadarae63b06d15b748ffe0edd3dd1" }
+
+
   config.gem 'rubytree', :lib => 'tree'
   
   # Load any local configuration that is kept out of source control

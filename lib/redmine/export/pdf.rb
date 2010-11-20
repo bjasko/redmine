@@ -19,7 +19,7 @@
 
 require 'iconv'
 require 'rfpdf/fpdf'
-require 'rfpdf/chinese'
+#require 'rfpdf/chinese'
 
 module Redmine
   module Export
@@ -27,7 +27,7 @@ module Redmine
       include ActionView::Helpers::TextHelper
       include ActionView::Helpers::NumberHelper
       
-      class IFPDF < FPDF
+      class IFPDF < TCPDF
         include Redmine::I18n
         attr_accessor :footer_date
         
@@ -56,8 +56,8 @@ module Redmine
             @font_for_content = 'Big5'
             @font_for_footer = 'Big5'
           else
-            @font_for_content = 'Arial'
-            @font_for_footer = 'Helvetica'              
+            @font_for_content = 'FreeSans'
+            @font_for_footer = 'FreeSans'
           end
           SetCreator(Redmine::Info.app_name)
           SetFont(@font_for_content)
@@ -120,7 +120,7 @@ module Redmine
         title = query.new_record? ? l(:label_issue_plural) : query.name
         title = "#{project} - #{title}" if project
         pdf.SetTitle(title)
-        pdf.AliasNbPages
+        pdf.alias_nb_pages
         pdf.footer_date = format_date(Date.today)
         pdf.AddPage("L")
         
@@ -189,7 +189,7 @@ module Redmine
       def issue_to_pdf(issue)
         pdf = IFPDF.new(current_language)
         pdf.SetTitle("#{issue.project} - ##{issue.tracker} #{issue.id}")
-        pdf.AliasNbPages
+        pdf.alias_nb_pages
         pdf.footer_date = format_date(Date.today)
         pdf.AddPage
         
@@ -316,7 +316,7 @@ module Redmine
       def gantt_to_pdf(gantt, project)
         pdf = IFPDF.new(current_language)
         pdf.SetTitle("#{l(:label_gantt)} #{project}")
-        pdf.AliasNbPages
+        pdf.alias_nb_pages
         pdf.footer_date = format_date(Date.today)
         pdf.AddPage("L")
         pdf.SetFontStyle('B',12)
