@@ -313,6 +313,7 @@ es:
   field_role: Perfil
   field_searchable: Incluir en las búsquedas
   field_spent_on: Fecha
+  field_start_date: Fecha de inicio
   field_start_page: Página principal
   field_status: Estado
   field_subject: Tema
@@ -635,8 +636,8 @@ es:
   label_user_activity: "Actividad de {{value}}"
   label_user_mail_no_self_notified: "No quiero ser avisado de cambios hechos por mí"
   label_user_mail_option_all: "Para cualquier evento en todos mis proyectos"
-  label_user_mail_option_none: "Sólo para elementos monitorizados o relacionados conmigo"
   label_user_mail_option_selected: "Para cualquier evento de los proyectos seleccionados..."
+  label_user_mail_option_none: "Sólo para elementos monitorizados o relacionados conmigo"
   label_user_new: Nuevo usuario
   label_user_plural: Usuarios
   label_version: Versión
@@ -951,13 +952,15 @@ es:
   label_overall_spent_time: Tiempo total dedicado
   field_time_entries: Log time
   project_module_gantt: Gantt
-  project_module_calendar: Calendar
-  field_member_of_group: Member of Group
-  field_assigned_to_role: Member of Role
-  button_edit_associated_wikipage: "Edit associated Wiki page: {{page_title}}"
-  text_are_you_sure_with_children: Delete issue and all child issues?
-  field_text: Text field
-
-  field_start_date: Start date
-  label_principal_search: "Search for user or group:"
-  label_user_search: "Search for user:"
+  project_module_calendar: Calendario
+  button_edit_associated_wikipage: "Editar paginas Wiki asociadas: {{page_title}}"
+  text_are_you_sure_with_children: ¿Borrar peticiones y todas sus peticiones hijas?
+  field_text: Campo de texto
+  setting_default_notification_option: Opcion de notificacion por defecto
+  field_member_of_group: Asignado al grupo
+  field_assigned_to_role: Asignado al perfil
+  notice_not_authorized_archived_project: El proyecto al que intenta acceder ha sido archivado.
+  label_principal_search: "Buscar por usuario o grupo:"
+  label_user_search: "Buscar por usuario:"
+  field_visible: Visible
+  setting_emails_header: Encabezado de Correos

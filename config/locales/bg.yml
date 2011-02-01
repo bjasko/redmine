@@ -221,6 +221,7 @@ bg:
   field_attr_lastname: Атрибут Фамилия (Lastname)
   field_attr_mail: Атрибут Email
   field_onthefly: Динамично създаване на потребител
+  field_start_date: Начална дата
   field_done_ratio: % Прогрес
   field_auth_source: Начин на оторизация
   field_hide_mail: Скрий e-mail адреса ми
@@ -321,7 +322,7 @@ bg:
   label_registered_on: Регистрация
   label_activity: Дейност
   label_new: Нов
-  label_logged_as: Влязъл като
+  label_logged_as: Здравейте,
   label_environment: Среда
   label_authentication: Оторизация
   label_auth_source: Начин на оторозация
@@ -808,12 +809,12 @@ bg:
   text_wiki_page_destroy_children: Изтриване на страниците деца и всички техни descendants
   setting_password_min_length: Минимална дължина на парола
   field_group_by: Групиране на резултатите по
-  mail_subject_wiki_content_updated: "Wiki страницата '{{id}}' не беше обновена"
+  mail_subject_wiki_content_updated: "Wiki страницата '{{page}}' не беше обновена"
   label_wiki_content_added: Wiki страница беше добавена
-  mail_subject_wiki_content_added: "Wiki страницата '{{id}}' беше добавена"
-  mail_body_wiki_content_added: Wiki страницата '{{id}}' беше добавена от {{author}}.
+  mail_subject_wiki_content_added: "Wiki страницата '{{page}}' беше добавена"
+  mail_body_wiki_content_added: Wiki страницата '{{page}}' беше добавена от {{author}}.
   label_wiki_content_updated: Wiki страница беше обновена
-  mail_body_wiki_content_updated: Wiki страницата '{{id}}' беше обновена от {{author}}.
+  mail_body_wiki_content_updated: Wiki страницата '{{page}}' беше обновена от {{author}}.
   permission_add_project: Създаване на проект
   setting_new_project_user_role_id: Роля, давана на потребител, създаващ проекти, който не е администратор
   label_view_all_revisions: Разглеждане на всички ревизии
@@ -850,8 +851,8 @@ bg:
   button_duplicate: Дублиране
   button_copy_and_follow: Копиране и продължаване
   label_copy_source: Източник
-  setting_issue_done_ratio: Изчисление на процента на готово задачи с
-  setting_issue_done_ratio_issue_status: Използване на състояниетона задачите
+  setting_issue_done_ratio: Изчисление на процента на готови задачи с
+  setting_issue_done_ratio_issue_status: Използване на състоянието на задачите
   error_issue_done_ratios_not_updated: Процентът на завършените задачи не е обновен.
   error_workflow_copy_target: Моля изберете тракер(и) и роля (роли).
   setting_issue_done_ratio_issue_field: Използване на поле 'задача'
@@ -896,28 +897,26 @@ bg:
   error_can_not_remove_role: Тази роля се използва и не може да бъде изтрита.
   error_can_not_delete_tracker: Този тракер съдържа задачи и не може да бъде изтрит.
   field_principal: Principal
-  label_my_page_block: My page block
+  label_my_page_block: Блокове в личната страница
   notice_failed_to_save_members: "Невъзможност за запис на член(ове): {{errors}}."
   text_zoom_out: Намаляване
   text_zoom_in: Увеличаване
   notice_unable_delete_time_entry: Невъзможност за изтриване на запис на time log.
   label_overall_spent_time: Общо употребено време
   field_time_entries: Log time
-  notice_not_authorized_archived_project: The project you're trying to access has been archived.
-  text_tip_issue_end_day: issue ending this day
-  field_text: Text field
-  label_user_mail_option_only_owner: Only for things I am the owner of
-  field_member_of_group: Assignee's group
-  project_module_gantt: Gantt
-  text_are_you_sure_with_children: Delete issue and all child issues?
-  text_tip_issue_begin_end_day: issue beginning and ending this day
-  setting_default_notification_option: Default notification option
-  project_module_calendar: Calendar
-  label_user_mail_option_only_my_events: Only for things I watch or I'm involved in
-  text_tip_issue_begin_day: issue beginning this day
-  label_user_mail_option_only_assigned: Only for things I am assigned to
-  button_edit_associated_wikipage: "Edit associated Wiki page: {{page_title}}"
+  notice_not_authorized_archived_project: Проектът, който се опитвате да видите е архивиран.
+  text_tip_issue_end_day: задача, завършваща този ден
+  field_text: Текстово поле
+  field_member_of_group: Член на група
+  project_module_gantt: Мрежов график
+  text_are_you_sure_with_children: Изтриване на задачата и нейните подзадачи?
+  text_tip_issue_begin_end_day: задача, започваща и завършваща този ден
+  setting_default_notification_option: Подразбиращ се начин за известяване
+  project_module_calendar: Календар
+  text_tip_issue_begin_day: задача, започваща този ден
+  button_edit_associated_wikipage: "Редактиране на асоциираната Wiki страница: {{page_title}}"
   field_assigned_to_role: Assignee's role
-  field_start_date: Start date
-  label_principal_search: "Search for user or group:"
-  label_user_search: "Search for user:"
+  label_principal_search: "Търсене на потребител или група:"
+  label_user_search: "Търсене на потребител:"
+  field_visible: Видим
+  setting_emails_header: Emails header

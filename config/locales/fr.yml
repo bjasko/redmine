@@ -271,6 +271,7 @@ fr:
   field_attr_lastname: Attribut Nom
   field_attr_mail: Attribut Email
   field_onthefly: Création des utilisateurs à la volée
+  field_start_date: Début
   field_done_ratio: % réalisé
   field_auth_source: Mode d'authentification
   field_hide_mail: Cacher mon adresse mail
@@ -937,12 +938,6 @@ fr:
   button_edit_associated_wikipage: "Modifier la page wiki associée: {{page_title}}"
   text_are_you_sure_with_children: Supprimer la demande et toutes ses sous-demandes ?
   field_text: Champ texte
-  label_user_mail_option_only_owner: Seulement pour ce que j'ai créé
   setting_default_notification_option: Option de notification par défaut
-  label_user_mail_option_only_my_events: Seulement pour ce que je surveille
-  label_user_mail_option_only_assigned: Seulement pour ce qui m'est assigné
-  label_user_mail_option_none: Aucune notification
   field_member_of_group: Groupe de l'assigné
   field_assigned_to_role: Rôle de l'assigné
-
-  field_start_date: Start date
