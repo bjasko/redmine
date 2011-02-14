@@ -102,7 +102,8 @@ module IssuesHelper
       # User can see public queries and his own queries
       visible = ARCondition.new(["is_public = ? OR user_id = ?", true, (User.current.logged? ? User.current.id : 0)])
       # Project specific queries and global queries
-      visible << (@project.nil? ? ["project_id IS NULL"] : ["project_id IS NULL OR project_id = ?", @project.id])
+      visible << (@project.nil? ? ["project_id IS NULL OR name LIKE ?", "---%"] : ["(project_id IS NULL OR name LIKE ?) OR project_id = ?", "---%", @project.id])
+
       @sidebar_queries = Query.find(:all, 
                                     :select => 'id, name',
                                     :order => "name ASC",

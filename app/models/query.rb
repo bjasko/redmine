@@ -145,9 +145,9 @@ class Query < ActiveRecord::Base
   
   def after_initialize
     # Store the fact that project is nil (used in #editable_by?)
-    @is_for_all = project.nil?
+    @is_for_all = project.nil? or !(/^---/.match(name).nil?)
   end
-  
+ 
   def validate
     filters.each_key do |field|
       errors.add label_for(field), :blank unless 
@@ -507,7 +507,15 @@ class Query < ActiveRecord::Base
   rescue ::ActiveRecord::StatementInvalid => e
     raise StatementInvalid.new(e.message)
   end
-  
+ 
+  def for_all_projects
+    if @is_for_all or  !(/^---/.match(name).nil?)
+         return true
+    end
+
+    return false
+  end
+ 
   private
   
   # Helper method to generate the WHERE sql for a +field+, +operator+ and a +value+

@@ -67,7 +67,8 @@ module QueriesHelper
   # Retrieve query from session or build a new query
   def retrieve_query
     if !params[:query_id].blank?
-      cond = "project_id IS NULL"
+      #hernad uvrsti i ove queries sto imaju ime koje pocinje sa "---"
+      cond = "(project_id IS NULL or name like '---%')"
       cond << " OR project_id = #{@project.id}" if @project
       @query = Query.find(params[:query_id], :conditions => cond)
       @query.project = @project

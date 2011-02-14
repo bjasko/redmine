@@ -13,8 +13,8 @@
 <% end %>
 
 <p><label for="query_is_for_all"><%=l(:field_is_for_all)%></label>
-<%= check_box_tag 'query_is_for_all', 1, @query.project.nil?,
-      :disabled => (!@query.new_record? && (@query.project.nil? || (@query.is_public? && !User.current.admin?))) %></p>
+<%= check_box_tag 'query_is_for_all', 1, @query.for_all_projects,
+      :disabled => (!@query.new_record? && (@query.for_all_projects || (@query.is_public? && !User.current.admin?))) %></p>
 
 <p><label for="query_default_columns"><%=l(:label_default_columns)%></label>
 <%= check_box_tag 'default_columns', 1, @query.has_default_columns?, :id => 'query_default_columns',
